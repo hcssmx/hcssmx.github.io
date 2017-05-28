@@ -1,37 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[啪毛毛妹妹]]></title>
-    <url>%2F2017%2F05%2F21%2F%E5%95%AA%E6%AF%9B%E6%AF%9B%E5%A6%B9%E5%A6%B9%2F</url>
-    <content type="text"><![CDATA[天天都要啪毛毛妹妹]]></content>
+    <title><![CDATA[python 连接MySql]]></title>
+    <url>%2F2017%2F05%2F20%2Fpython%20%E8%BF%9E%E6%8E%A5MySql%2F</url>
+    <content type="text"><![CDATA[首先import处理Mysql的库，我个人更习惯pymysql。1import pymysql 接下来设定JDBC连接选项，填入相应的数据库地址，数据库名，用户名密码。123456conn=pymysql.connect(host='x.x.x.x', port=3306, user='user', db='dbname', password='password', charset='utf8mb4') 然后我们就可以使用配置好的数据库连接对象conn来连接相应的MySql数据库了，连接后得到一个句柄cursor。1cursor=conn.cursor() 连接好数据库之后，就可以在数据库上执行sql语句123sql="select * from test_table"cursor.execute(sql)result = cursor.fetchone() 上面的语句首先构造一个sql语句，在实际工作中，我们肯定需要动态构造sql语句，这里只是为了演示。然后通过cursor的execute方法来执行sql语句。得到返回结果的方法有两种12fetchone() #返回第一行结果，返回值是一个元组fetchall() #返回所有结果，返回值是多个元组 可以动手试试这两种方法的区别，加深理解。最后，使用完数据库我们需要关闭数据库连接，否则可能会造成内存泄漏，关闭的方法如下：12cursor.close()conn.close() 其实python3的新功能with可以让我们更安全的使用数据库和文件，而不用留心数据库和文件的关闭，之后我们会介绍相关的内容。]]></content>
       <tags>
-        <tag>啪毛毛</tag>
+        <tag>python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[cc]]></title>
-    <url>%2F2017%2F05%2F21%2Fcc%2F</url>
-    <content type="text"><![CDATA[按时阿萨斯]]></content>
-      <tags>
-        <tag>aabb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[tes]]></title>
-    <url>%2F2017%2F05%2F21%2Ftes%2F</url>
-    <content type="text"><![CDATA[本场是2017季中冠军赛半决赛，由来WE战队对阵G2战队，最终G2凭借更加出色的团队配合击败了WE，晋级决赛，决赛中他们将遭遇强大的SKT战队，下面让我们一起回顾本场精彩的对决。 第一场 Perkz维克托伤害爆炸 G2击败WE拿下首局 BP阵容 WE先手ban掉了凯南，盲僧，蛤蟆，剑姬，男枪，选择了酒桶，翠神，卢锡安，女警，蚂蚱。 G2则ban掉了璐璐，扇子妈，婕拉，克烈，小鱼人，选择了兰博，奥拉夫，维克托，寒冰，宝石。 赛况分析 开局G2奥拉夫率先gank下路，但WE酒桶TP支援到后，女警跟上输出拿下一血。但双方到达6级后，G2的小规模团战优势得以体现，小龙以及下路的两波团战，G2都利用宝石大招成功保护队友打出优势，前期G2经济略微领先。 中期WE在中路抓住一波机会，蚂蚱先手开团帮助队伍率先秒掉维克托，此后女警和卢锡安的输出得以解放，WE打出1换3后直接拿下大龙。凭借大龙BUFF，WE在下路抱团轻松磨掉了G2的下路二塔。虽然WE在场面上占据优势，但G2方面维克托装备非常好，双方团战仍然打的非常焦灼。 后期第二条大龙刷新，G2利用视野盲区强开大龙，WE赶到后逼退G2拿下大龙，但G2追击打出0换3.G2维克托和兰博的大招让WE始终很难主动开团，只能再次在大龙处做视野牵扯。第三条大龙刷新，WE快速拿下大龙，而G2转头拿下远古龙，中路一波团战，维克托闪现直接秒掉女警，G2趁胜追击打出0换3后一波推掉了WE基地。 第二场 中野强势发力 G2再胜WE拿到赛点 BP阵容 G2先手ban掉了婕拉，小鱼人，女警，妖姬，卢锡安，选择了加里奥，奥拉夫，辛德拉，韦鲁斯，扇子妈。 WE则ban掉了璐璐，翠神，凯南，酒桶，发条，选择了兰博，盲僧，岩雀，寒冰，锤石。 赛况分析 开局WE打野盲僧入侵G2野区成功抢到红buff，但随后在上路野区，G2辛德拉赶到配合队友拿下了盲僧人头。此后G2奥拉夫连续gank上下路帮助队友也打出优势，加里奥配合奥拉夫率先破掉了WE上路一塔，前期G2凭借打野的gank在三路都打出优势，经济领先。 中期G2利用上中的推线优势开始入侵WE野区掠夺资源，小龙团战中，G2利用奥拉夫配合加里奥大招进场留人打出0换2，WE整体发育不如G2在团战中很难处理加里奥这个前排。中期G2凭借装备优势在团战中压制住了WE，拿掉了防御塔巩固了经济优势。 后期WE在中路利用寒冰大招开团，但G2前排实在太肉，辛德拉和韦鲁斯成功收割，G2一波反打打出1换4后破掉了WE中路高地。回城更新装备后，G2在野区再次打出0换2后拿下了大龙，巨大的装备差距让WE在团战中没有任何优势，稳步推进后G2拿下比赛胜利。 第三场 Condi盲僧秀翻全场 WE击败G2扳回一城 BP阵容 WE先手ban掉了凯南，奥拉夫，翠神，剑姬，辛德拉，选择了慎，盲僧，杰斯，大嘴，娜美。 G2则ban掉了璐璐，扇子妈，婕拉，卢锡安，妖姬，选择了加里奥，男枪，狐狸，女警，锤石。 赛况分析 开局G2打野男枪率先gank下路帮助女警拿下WE娜美一血，而双方中路到达6级后，G2中单狐狸成功单杀了杰斯打出优势。此后G2五人包中率先破掉了WE中路一塔，前期G2在中下路打出优势，经济领先。 中期利用女警推塔优势破掉了WE上下路一塔，而WE打野盲僧开始发力，配合队友在野区击杀了男枪和加里奥后将局势稳住。此后WE利用转线在上路抱团同样破掉了G2的上路一塔，团战中杰斯和大嘴的作战能力开始体现，中期WE利用上野的联动逐渐打出优势。 后期中路爆发团战，WE盲僧配合慎进场留人后打出1换4拿下大龙。凭借大龙buff，WE在下路抱团，盲僧在河道再次抓到机会开团，WE再次打出1换4，此后WE磨掉了G2所有外塔。慎和大嘴装备的领先让WE在团战中逐渐占据上风，不断利用兵线磨塔后WE稳步推进拿下比赛胜利。 第四场 BP阵容 G2先手ban掉了婕拉，女警，翠神，娜美，慎，选择了加里奥，螳螂，辛德拉，韦鲁斯，扇子妈。 WE则ban掉了璐璐，凯南，奥拉夫，剑姬，兰博，选择了克烈，盲僧，小鱼人，大嘴，蛤蟆。 赛况分析 开局双方没有过多交火，到达6级后WE克烈利用大招配合小鱼人拿下了辛德拉一血，此后WE下路来到中路再次帮助小鱼人击杀辛德拉。但G2此后在下路打出优势，加里奥利用大招配合队友打出2换5，破掉了WE下路一塔。前期WE针对中路帮助小鱼人打出优势，但G2在上野以及下路的发育上更加优秀。 中期G2开始抱团破掉了WE的上路一塔，随后双方在分带中在撒谎那个路爆发团战，G2利用辛德拉和韦鲁斯的输出打出0换3破掉了WE上路二塔。此后G2选择强开大龙，虽然WE盲僧成功抢到大龙，但G2打出一波0换3后破掉了WE中路高地塔。 后期G2抓住机会破掉了WE中路高地，随后G2利用加里奥传送绕后率先击杀了WE辅助蛤蟆后转头拿下大龙。大龙处G2趁胜锤击打出一波0换4后一波推掉了WE基地。]]></content>
-      <categories>
-        <category>Testing</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[你好]]></title>
-    <url>%2F2017%2F05%2F20%2F%E4%BD%A0%E5%A5%BD%2F</url>
-    <content type="text"><![CDATA[你好，欢迎来到我的技术博客]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F05%2F20%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
