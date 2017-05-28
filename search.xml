@@ -3,9 +3,10 @@
   <entry>
     <title><![CDATA[python 连接MySql]]></title>
     <url>%2F2017%2F05%2F20%2Fpython%20%E8%BF%9E%E6%8E%A5MySql%2F</url>
-    <content type="text"><![CDATA[首先import处理Mysql的库，我个人更习惯pymysql。1import pymysql 接下来设定JDBC连接选项，填入相应的数据库地址，数据库名，用户名密码。123456conn=pymysql.connect(host='x.x.x.x', port=3306, user='user', db='dbname', password='password', charset='utf8mb4') 然后我们就可以使用配置好的数据库连接对象conn来连接相应的MySql数据库了，连接后得到一个句柄cursor。1cursor=conn.cursor() 连接好数据库之后，就可以在数据库上执行sql语句123sql="select * from test_table"cursor.execute(sql)result = cursor.fetchone() 上面的语句首先构造一个sql语句，在实际工作中，我们肯定需要动态构造sql语句，这里只是为了演示。然后通过cursor的execute方法来执行sql语句。得到返回结果的方法有两种12fetchone() #返回第一行结果，返回值是一个元组fetchall() #返回所有结果，返回值是多个元组 可以动手试试这两种方法的区别，加深理解。最后，使用完数据库我们需要关闭数据库连接，否则可能会造成内存泄漏，关闭的方法如下：12cursor.close()conn.close() 其实python3的新功能with可以让我们更安全的使用数据库和文件，而不用留心数据库和文件的关闭，之后我们会介绍相关的内容。]]></content>
+    <content type="text"><![CDATA[数据处理的过程中肯定需要和数据库打交道，Mysql作为开源数据库的王者，在互联网时代成为了关系型数据库的最优选择。由于其开源的特性，天然的适合于编程语言进行交互。在这篇博客里我来讲一下python与Mysql进行交互的方法。首先import处理Mysql的库，我个人更习惯pymysql。1import pymysql 接下来设定JDBC连接选项，填入相应的数据库地址，数据库名，用户名密码。123456conn=pymysql.connect(host='x.x.x.x', port=3306, user='user', db='dbname', password='password', charset='utf8mb4') 然后我们就可以使用配置好的数据库连接对象conn来连接相应的MySql数据库了，连接后得到一个句柄cursor。1cursor=conn.cursor() 连接好数据库之后，就可以在数据库上执行sql语句123sql="select * from test_table"cursor.execute(sql)result = cursor.fetchone() 上面的语句首先构造一个sql语句，在实际工作中，我们肯定需要动态构造sql语句，这里只是为了演示。然后通过cursor的execute方法来执行sql语句。得到返回结果的方法有两种12fetchone() #返回第一行结果，返回值是一个元组fetchall() #返回所有结果，返回值是多个元组 可以动手试试这两种方法的区别，加深理解。最后，使用完数据库我们需要关闭数据库连接，否则可能会造成内存泄漏，关闭的方法如下：12cursor.close()conn.close() 其实python3的新功能with可以让我们更安全的使用数据库和文件，而不用留心数据库和文件的关闭，之后我们会介绍相关的内容。]]></content>
       <tags>
         <tag>python</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
 </search>

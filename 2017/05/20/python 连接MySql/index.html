@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="python,mysql," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="首先import处理Mysql的库，我个人更习惯pymysql。1import pymysql 接下来设定JDBC连接选项，填入相应的数据库地址，数据库名，用户名密码。123456conn=pymysql.connect(host=&apos;x.x.x.x&apos;,                     port=3306,                     user=&apos;user&apos;,">
-<meta name="keywords" content="python">
+<meta name="description" content="数据处理的过程中肯定需要和数据库打交道，Mysql作为开源数据库的王者，在互联网时代成为了关系型数据库的最优选择。由于其开源的特性，天然的适合于编程语言进行交互。在这篇博客里我来讲一下python与Mysql进行交互的方法。">
+<meta name="keywords" content="python,mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python 连接MySql">
 <meta property="og:url" content="https://hcssmx.github.io/2017/05/20/python 连接MySql/index.html">
 <meta property="og:site_name" content="马啸的博客">
-<meta property="og:description" content="首先import处理Mysql的库，我个人更习惯pymysql。1import pymysql 接下来设定JDBC连接选项，填入相应的数据库地址，数据库名，用户名密码。123456conn=pymysql.connect(host=&apos;x.x.x.x&apos;,                     port=3306,                     user=&apos;user&apos;,">
-<meta property="og:updated_time" content="2017-05-28T03:28:47.646Z">
+<meta property="og:description" content="数据处理的过程中肯定需要和数据库打交道，Mysql作为开源数据库的王者，在互联网时代成为了关系型数据库的最优选择。由于其开源的特性，天然的适合于编程语言进行交互。在这篇博客里我来讲一下python与Mysql进行交互的方法。">
+<meta property="og:updated_time" content="2017-05-28T03:38:31.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python 连接MySql">
-<meta name="twitter:description" content="首先import处理Mysql的库，我个人更习惯pymysql。1import pymysql 接下来设定JDBC连接选项，填入相应的数据库地址，数据库名，用户名密码。123456conn=pymysql.connect(host=&apos;x.x.x.x&apos;,                     port=3306,                     user=&apos;user&apos;,">
+<meta name="twitter:description" content="数据处理的过程中肯定需要和数据库打交道，Mysql作为开源数据库的王者，在互联网时代成为了关系型数据库的最优选择。由于其开源的特性，天然的适合于编程语言进行交互。在这篇博客里我来讲一下python与Mysql进行交互的方法。">
 
 
 
@@ -402,7 +402,7 @@
       
 
       
-        <p>首先import处理Mysql的库，我个人更习惯pymysql。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pymysql</div></pre></td></tr></table></figure></p>
+        <p>数据处理的过程中肯定需要和数据库打交道，Mysql作为开源数据库的王者，在互联网时代成为了关系型数据库的最优选择。由于其开源的特性，天然的适合于编程语言进行交互。在这篇博客里我来讲一下python与Mysql进行交互的方法。<br><a id="more"></a><br>首先import处理Mysql的库，我个人更习惯pymysql。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pymysql</div></pre></td></tr></table></figure></p>
 <p>接下来设定JDBC连接选项，填入相应的数据库地址，数据库名，用户名密码。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">conn=pymysql.connect(host=<span class="string">'x.x.x.x'</span>,</div><div class="line">                     port=<span class="number">3306</span>,</div><div class="line">                     user=<span class="string">'user'</span>,</div><div class="line">                     db=<span class="string">'dbname'</span>,</div><div class="line">                     password=<span class="string">'password'</span>,</div><div class="line">                     charset=<span class="string">'utf8mb4'</span>)</div></pre></td></tr></table></figure></p>
 <p>然后我们就可以使用配置好的数据库连接对象conn来连接相应的MySql数据库了，连接后得到一个句柄cursor。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cursor=conn.cursor()</div></pre></td></tr></table></figure></p>
 <p>连接好数据库之后，就可以在数据库上执行sql语句<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sql=<span class="string">"select * from test_table"</span></div><div class="line">cursor.execute(sql)</div><div class="line">result = cursor.fetchone()</div></pre></td></tr></table></figure></p>
@@ -439,6 +439,8 @@
         <div class="post-tags">
           
             <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
         </div>
       
@@ -544,7 +546,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
